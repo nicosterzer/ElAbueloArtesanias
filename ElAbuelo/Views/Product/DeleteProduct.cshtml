@@ -1,0 +1,23 @@
+﻿@model Product
+
+<h3> Eliminar producto </h3> 
+
+<form method="post" asp-action="Delete">
+
+    <div class="form-group">
+        <label> Nombre </label>
+        <label> @Html.DisplayFor(m => m.Name)</label>
+    </div>
+
+    <div class="form-group">
+        <label> Descripción </label>
+        <label> @Html.DisplayFor(m => m.Description)</label>
+    </div>
+
+    <div class="form-group">
+        <label> Imagen </label>        
+            <img src="@Model.ImagePath" alt="Imagen del producto" />
+    </div>
+
+    <button type="submit" class="btn btn-danger"> Eliminar </button>
+</form>

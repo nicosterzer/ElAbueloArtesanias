@@ -1,0 +1,26 @@
+﻿@model Product
+
+<div class="row">
+
+    <div class="col-4">
+        <div class="mb-33">
+            <label class="form-label"> Imagen </label>
+            <img src="@Html.DisplayFor(m => m.ImagePath)" class="rounded float-start" onerror="'this.src=https://empowher.org/wp-content/uploads/2021/03/image-placeholder-350x350-1.png'" alt="Imagen del producto" />
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="mb-3">
+            <label class="form-label"> Nombre </label>
+            <label class="form-label"> @Html.DisplayFor(model => model.Name) </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"> Descripción </label>
+            <label class="form-label"> @Html.DisplayFor(model => model.Description) </label>
+        </div>
+        <div class="mb-3">
+            <a asp-controller="Product" asp-action="Index" class="btn btn-primary"> Volver </a>
+        </div>
+    </div>
+
+</div> 

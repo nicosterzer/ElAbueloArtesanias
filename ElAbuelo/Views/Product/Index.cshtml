@@ -1,0 +1,17 @@
+﻿@model List<Product>
+
+<h1> Nuestros productos </h1>
+
+<div class="card-group">
+    @foreach (var p in Model)
+    {
+        <div class="card" style="width: 18rem; margin: 1rem;" >
+            <img class="card-img-top" src="@p.ImagePath" onerror="'this.src=https://empowher.org/wp-content/uploads/2021/03/image-placeholder-350x350-1.png'" alt="Imagen del producto">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(m => p.Name)</h5>
+                <p class="card-text">@Html.DisplayFor(m => p.Description)</p>
+                <a asp-controller="Product" asp-action="Details" asp-route-id="@p.Id" class="btn btn-primary"> Ver detalle </a>
+            </div>
+        </div>
+    }
+</div>
