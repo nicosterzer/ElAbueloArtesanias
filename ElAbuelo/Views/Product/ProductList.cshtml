@@ -17,8 +17,8 @@
                 <td>@Html.DisplayFor(model => prod.Name)</td>
                 <td>@Html.DisplayFor(model => prod.Description)</td>
                 <td>
-                    <button asp-controller="Product" asp-action="Edit" asp-route-id="@prod.Id" class="btn btn-primary">Editar</button>
-                    <button asp-controller="Product" asp-action="Delete" asp-route-id="@prod.Id" class="btn btn-danger">Eliminar</button>
+                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@prod.Id" class="btn btn-primary">Editar</a>
+                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@prod.Id" class="btn btn-danger">Eliminar</a>
                 </td>
             </tr>
         }
@@ -26,7 +26,7 @@
     <tfoot>
         <tr>
             <td colspan="3">
-                <button asp-controller="Product" asp-action="Create" class="btn btn-primary">Agregar</button>
+                <a asp-controller="Product" asp-action="Create" class="btn btn-primary">Agregar</a>
             </td>
         </tr>
     </tfoot>

@@ -32,9 +32,10 @@ namespace ElAbuelo.Controllers
             return View("~/Views/Product/ProductDetails.cshtml", product);
         }
 
+ 
         public IActionResult Create()
         {
-            return View();
+            return View("~/Views/Product/CreateProduct.cshtml");
         }
 
         [HttpPost]
@@ -66,7 +67,7 @@ namespace ElAbuelo.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             var product = await _context.Products.FindAsync(id);
-            return View(product);
+            return View("~/Views/Product/EditProduct.cshtml",product);
         }
 
         [HttpPost]
@@ -106,7 +107,7 @@ namespace ElAbuelo.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var product = await _context.Products.FindAsync(id);
-            return View(product);
+            return View("~/Views/Product/DeleteProduct.cshtml", product);
         }
 
         [HttpPost, ActionName("Delete")]
